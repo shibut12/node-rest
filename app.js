@@ -3,6 +3,8 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 var port = process.env.PORT || 5000;
+var secretKey = process.env.SECRET_KEY || "secret_key"
+
 
 app.get('/api', (req, res)=> {
     res.json({
@@ -11,7 +13,7 @@ app.get('/api', (req, res)=> {
 });
 
 app.post('/api/posts', verifyToken, (req, res) =>{
-    jwt.verify(req.token, 'secretkey', (err, authData) => {
+    jwt.verify(req.token, secretKey, (err, authData) => {
         if(err){
             res.sendStatus(401);
         }
@@ -32,7 +34,7 @@ app.post('/api/login', (req, res)=> {
         username: 'Shibu',
         email: 'shibu@mail.com'
     }
-    jwt.sign({user: user}, 'secretkey', (err, token)=>{
+    jwt.sign({user: user}, secretKey, (err, token)=>{
         res.json({
             token
         });
