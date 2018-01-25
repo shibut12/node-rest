@@ -1,0 +1,24 @@
+{
+  "name": "node-rest-jwt",
+  "version": "1.0.0",
+  "description": "Restful app with jwt tokens",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shibut12/node-rest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shibut12/node-rest/issues"
+  },
+  "homepage": "https://github.com/shibut12/node-rest#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.1"
+  }
+}
