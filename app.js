@@ -39,6 +39,12 @@ app.post('/api/login', (req, res)=> {
     })
 });
 
+app.get('/', (req, res) => {
+    res.json({
+        message: 'welcome to sample restful api secured with bearer tokens'
+    });
+});
+
 //Format of token
 // Authorization: bearer <access_token>
 //verify token
