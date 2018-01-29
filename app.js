@@ -43,7 +43,7 @@ app.post('/api/login', (req, res)=> {
 
 app.get('/', (req, res) => {
     res.json({
-        message: 'Hello, welcome to sample restful api secured with bearer tokens'
+        message: 'Hello, welcome to sample restful api secured with bearer tokens!'
     });
 });
 
